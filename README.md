@@ -26,4 +26,5 @@ https://www.saucedemo.com/ que incluya:
 ## Instalación
 * Clonar el repositorio en la máquina local: git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.
 * Verificar dependencias en el pom.xml
-* Ubicarse en la clase RunnerMain que se encuentra dentro de la carpeta /src/test/java y ejecutar el RunnerMain
+* * Abrir el archivo 'RunnersMain' de la ruta "src/test/java/runners"
+* Click sobre 'Run' en la clase 'RunnerMain'
