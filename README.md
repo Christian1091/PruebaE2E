@@ -28,3 +28,13 @@ https://www.saucedemo.com/ que incluya:
 * Verificar dependencias en el pom.xml
 * * Abrir el archivo 'RunnersMain' de la ruta "src/test/java/runners"
 * Click sobre 'Run' en la clase 'RunnerMain'
+
+  ## Reporte
+* El reporte se encuentra generado en la ruta **target/cucumber-report/PruebaE2E.html**
+* ![Reporte Prueba E2E](./images/Reporte.png)
+
+# CONCLUSIONES
+
+A lo largo de la resolución de este ejercicio, he confirmado que Serenity BDD Screenplay es un framework altamente eficiente y flexible para la automatización de pruebas a nivel web. Entre sus principales ventajas se destacan su capacidad para gestionar múltiples casos de prueba en diversos escenarios, lo que facilita una cobertura amplia de condiciones en un solo conjunto de pruebas. Este enfoque modular y organizado no solo optimiza el proceso de automatización, sino que también mejora la mantenibilidad y escalabilidad de las pruebas a medida que el proyecto crece.
+
+En resumen, Serenity BDD Screenplay ofrece una solución robusta y bien estructurada para la automatización de pruebas, permitiendo un alto grado de personalización y eficiencia en la ejecución de pruebas complejas.
