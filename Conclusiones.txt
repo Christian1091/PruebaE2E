@@ -1,0 +1,5 @@
+CONCLUSIONES
+
+A lo largo de la resolución de este ejercicio, he confirmado que Serenity BDD Screenplay es un framework altamente eficiente y flexible para la automatización de pruebas a nivel web. Entre sus principales ventajas se destacan su capacidad para gestionar múltiples casos de prueba en diversos escenarios, lo que facilita una cobertura amplia de condiciones en un solo conjunto de pruebas. Este enfoque modular y organizado no solo optimiza el proceso de automatización, sino que también mejora la mantenibilidad y escalabilidad de las pruebas a medida que el proyecto crece.
+
+En resumen, Serenity BDD Screenplay ofrece una solución robusta y bien estructurada para la automatización de pruebas, permitiendo un alto grado de personalización y eficiencia en la ejecución de pruebas complejas.

@@ -10,7 +10,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com.prueba",
-        tags = "@Shopping"
+        tags = "@Shopping",
+        plugin = {
+                "pretty",
+                "html:target/cucumber-report/PruebaE2E.html",
+                "json:target/cucumber-report/PruebaE2E.json"
+        }
 )
 class RunnerMain {
 }
