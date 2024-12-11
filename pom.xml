@@ -16,9 +16,15 @@
         <junit-version>4.13.2</junit-version>
         <maven-plugins-version>3.1.2</maven-plugins-version>
         <slf4j-version>2.0.7</slf4j-version>
+        <maven.cucumber.reporting.version>5.7.4</maven.cucumber.reporting.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>${maven.cucumber.reporting.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -94,6 +100,7 @@
                     <source>${maven.compiler.source}</source>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
@@ -107,6 +114,30 @@
                                 aggregate
                             </goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>${maven.cucumber.reporting.version}</version>
+
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>Reporte Prueba E2E</projectName>
+                            <outputDirectory>${project.build.directory}/</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

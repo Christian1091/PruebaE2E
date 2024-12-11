@@ -1,2 +1,2 @@
-username,password,firstName,lastName,codePostal
-standard_user,secret_sauce,Rodolfo,Salamea,010103
+firstName,lastName,codePostal
+Rodolfo,Salamea,010103

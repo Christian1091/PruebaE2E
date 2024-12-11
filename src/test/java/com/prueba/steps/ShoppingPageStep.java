@@ -17,6 +17,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.List;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -36,18 +37,14 @@ public class ShoppingPageStep {
         theActorCalled(name).attemptsTo(OpenPage.openPage());
     }
 
-    @When("Me autentico con el usuario: standard_user y password: secret_sauce")
-    public void meAutenticarseConElUsuario_standard_userYpassword_secret_sauce() throws IOException {
-        List<String[]> credentials = readData.readCsv("src/test/resources/data/dataUsers.csv");
-        for (String[] credential : credentials) {
-            String username = credential[0];
-            String password = credential[1];
+    @When("^Me autentico con el (.*) and (.*)$")
+    public void meAutenticarseConElUsuario_standard_userYpassword_secret_sauce(String username, String password){
 
             theActorCalled(name).attemptsTo(
                     OpenPage.openPage(),
                     DoLogin.withCredentials(username, password)
             );
-        }
+
     }
 
     @Then("Agregar dos productos al carrito")
@@ -68,9 +65,9 @@ public class ShoppingPageStep {
     public void completarElFormularioDeCompra() throws IOException {
         List<String[]> dataClients = readData.readCsv("src/test/resources/data/dataUsers.csv");
         for (String[] dataClient : dataClients) {
-            String firstName = dataClient[2];
-            String lastName = dataClient[3];
-            String codePostal = dataClient[4];
+            String firstName = dataClient[0];
+            String lastName = dataClient[1];
+            String codePostal = dataClient[2];
 
             theActorCalled(name).attemptsTo(
                     CompleteCheckOut.withDetails(firstName, lastName, codePostal)
