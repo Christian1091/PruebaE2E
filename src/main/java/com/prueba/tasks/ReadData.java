@@ -15,12 +15,10 @@ public class ReadData {
 
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withHeader().parse(reader);
         for (CSVRecord record : records) {
-            String[] row = new String[5];
-            row[0] = record.get("username");
-            row[1] = record.get("password");
-            row[2] = record.get("firstName");
-            row[3] = record.get("lastName");
-            row[4] = record.get("codePostal");
+            String[] row = new String[3];
+            row[0] = record.get("firstName");
+            row[1] = record.get("lastName");
+            row[2] = record.get("codePostal");
             rows.add(row);
         }
 
