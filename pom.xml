@@ -20,6 +20,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>${maven.cucumber.reporting.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>net.masterthought</groupId>
@@ -101,6 +106,7 @@
                     <source>${maven.compiler.source}</source>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>

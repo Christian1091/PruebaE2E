@@ -17,6 +17,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.List;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -36,12 +37,23 @@ public class ShoppingPageStep {
         theActorCalled(name).attemptsTo(OpenPage.openPage());
     }
 
+<<<<<<< HEAD
     @When("^Me autentico con el (.*) y (.*)$")
     public void meAutenticarseConElUsuarioyContrasenia(String username, String password) throws IOException {
         theActorCalled(name).attemptsTo(
                 OpenPage.openPage(),
                 DoLogin.withCredentials(username, password)
         );
+=======
+    @When("^Me autentico con el (.*) and (.*)$")
+    public void meAutenticarseConElUsuario_standard_userYpassword_secret_sauce(String username, String password){
+
+            theActorCalled(name).attemptsTo(
+                    OpenPage.openPage(),
+                    DoLogin.withCredentials(username, password)
+            );
+
+>>>>>>> 111bda151ec0af129578fad5e1a364d01ba3d21d
     }
 
     @Then("Agregar dos productos al carrito")
